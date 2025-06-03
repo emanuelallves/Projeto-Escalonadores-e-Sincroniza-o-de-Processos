@@ -28,11 +28,9 @@ public class Main {
         Simulador.executarComThreads(processos, 4);
         Simulador.executarComThreads(processos, 6);
 
-        // Passo 1: SJF
         Escalonador.SJF(processosSJF);
         Metrica.calcularMetricas(processosSJF, "SJF");
 
-        // Passo 2: Round Robin
         Escalonador.RoundRobin(processosRR, 3);
         Metrica.calcularMetricas(processosRR, "Round Robin");
     }
